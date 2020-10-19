@@ -1,0 +1,162 @@
+*******************************************************************
+*  Stata "do-file" file with labels and missing data specifications
+*  Created by ddltox on Oct 15, 2020  (Thu 12:08 PM EDT)
+*  DDL source file: "/web/sda.artsci.utoronto.ca/htdocs/sdaweb/tmpdir/AAETQPeP.txt".
+*
+*  Note that the data dictionary is given at the end of this file.
+*  Put the dictionary into a separate file (by editing this file).
+*  Then specify below the name of the dictionary file.
+*
+*  DDL file gives the following dataset description:
+*    Records per case: 1
+*    Record length:    128
+*******************************************************************
+
+
+label data "General Social Survey, Cycle 30: Canadians at Work and Home"
+
+#delimit ;
+label define recid     99996 "Valid skip" 99997 "Don't know" 99998 "Refusal" 
+                       99999 "Not stated" ;
+label define wght_per  99999.9996 "Valid skip" 99999.9997 "Don't know" 
+                       99999.9998 "Refusal" 99999.9999 "Not stated" ;
+label define wght_csp  99999.9996 "Valid skip" 99999.9997 "Don't know" 
+                       99999.9998 "Refusal" 99999.9999 "Not stated" ;
+label define wght_snt  99999.9996 "Valid skip" 99999.9997 "Don't know" 
+                       99999.9998 "Refusal" 99999.9999 "Not stated" ;
+label define spltsmpl  1 "Sports" 2 "Culture" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define whw120gr  1 ">0 to 15 hours" 2 "16 to 29 hours" 
+                       3 "30 to 40 hours" 4 "41 hours and above" 
+                       6 "Valid skip" 7 "Don't know" 8 "Refusal" 
+                       9 "Not stated" ;
+label define whw_230   1 "A regular daytime schedule or shift" 
+                       2 "A regular evening shift" 3 "A regular night shift" 
+                       4 "A rotating shift" 5 "A split shift" 
+                       6 "A compressed work week" 7 "On call or casual" 
+                       8 "An irregular schedule" 9 "Other - Specify" 
+                       96 "Valid skip" 97 "Don't know" 98 "Refusal" 
+                       99 "Not stated" ;
+label define whw_240   1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define jsr_01gr  1 "Always" 2 "Often" 3 "Sometimes" 6 "Valid skip" 
+                       7 "Don't know" 8 "Refusal" 9 "Not stated" ;
+label define jsr_02    1 "Very satisfied" 2 "Satisfied" 
+                       3 "Neither satisfied nor dissatisfied" 
+                       4 "Dissatisfied" 5 "Very dissatisfied" 6 "Valid skip" 
+                       7 "Don't know" 8 "Refusal" 9 "Not stated" ;
+label define jsr_03    1 "Pay is too low" 2 "Not enough hours" 
+                       3 "No or not enough benefits" 
+                       4 "You do not like the work environment" 
+                       5 "No opportunities for advancement" 
+                       6 "Other - Specify" 96 "Valid skip" 97 "Don't know" 
+                       98 "Refusal" 99 "Not stated" ;
+label define jsr_04    1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define jsr_05    1 "To change career" 2 "Pay is too low" 3 "To retire" 
+                       4 "Workload is too heavy" 5 "Other - Specify" 
+                       6 "Valid skip" 7 "Don't know" 8 "Refusal" 
+                       9 "Not stated" ;
+label define jsr_06    1 "Yes" 2 "No" 3 "Uncertain at this time" 
+                       6 "Valid skip" 7 "Don't know" 8 "Refusal" 
+                       9 "Not stated" ;
+label define jsr_07    1 "Strongly agree" 2 "Agree" 
+                       3 "Neither agree nor disagree" 4 "Disagree" 
+                       5 "Strongly disagree" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define jsr_08    1 "Strongly agree" 2 "Agree" 
+                       3 "Neither agree nor disagree" 4 "Disagree" 
+                       5 "Strongly disagree" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define jsr_09    1 "Always" 2 "Often" 3 "Sometimes" 4 "Rarely" 
+                       5 "Never" 6 "Valid skip" 7 "Don't know" 8 "Refusal" 
+                       9 "Not stated" ;
+label define jsr_10    1 "Always" 2 "Often" 3 "Sometimes" 4 "Rarely" 
+                       5 "Never" 6 "Valid skip" 7 "Don't know" 8 "Refusal" 
+                       9 "Not stated" ;
+label define wir_01    1 "Always" 2 "Often" 3 "Sometimes" 4 "Rarely" 
+                       5 "Never" 6 "Valid skip" 7 "Don't know" 8 "Refusal" 
+                       9 "Not stated" ;
+label define wir_02    1 "Always" 2 "Often" 3 "Sometimes" 4 "Rarely" 
+                       5 "Never" 6 "Valid skip" 7 "Don't know" 8 "Refusal" 
+                       9 "Not stated" ;
+label define wir_03    1 "Always" 2 "Often" 3 "Sometimes" 4 "Rarely" 
+                       5 "Never" 6 "Valid skip" 7 "Don't know" 8 "Refusal" 
+                       9 "Not stated" ;
+label define wir_04    1 "Always" 2 "Often" 3 "Sometimes" 4 "Rarely" 
+                       5 "Never" 6 "Valid skip" 7 "Don't know" 8 "Refusal" 
+                       9 "Not stated" ;
+label define wir_05    1 "Always" 2 "Often" 3 "Sometimes" 4 "Rarely" 
+                       5 "Never" 6 "Valid skip" 7 "Don't know" 8 "Refusal" 
+                       9 "Not stated" ;
+label define wir_06    1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define wir_07    1 "Yes" 2 "No" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define heh_01    1 "Excellent" 2 "Very good" 3 "Good" 4 "Fair" 5 "Poor" 
+                       6 "Valid skip" 7 "Don't know" 8 "Refusal" 
+                       9 "Not stated" ;
+label define heh_02    1 "Daily" 2 "A few times a week" 3 "Once a week" 
+                       4 "A few times a month" 5 "Once a month" 
+                       6 "Not in the past month" 96 "Valid skip" 
+                       97 "Don't know" 98 "Refusal" 99 "Not stated" ;
+label define heh_03    1 "Breakfast" 2 "Morning snack" 3 "Lunch" 
+                       4 "Afternoon snack" 5 "Dinner" 6 "Late night snack" 
+                       96 "Valid skip" 97 "Don't know" 98 "Refusal" 
+                       99 "Not stated" ;
+label define heh_04    1 "No time to cook or for convenience" 
+                       2 "Do not like or know how to cook" 
+                       3 "As a treat, or for a special occasion or celebration" 
+                       4 "To socialize with friends or family" 
+                       5 "For business or professional reasons" 
+                       6 "Other - Specify" 96 "Valid skip" 97 "Don't know" 
+                       98 "Refusal" 99 "Not stated" ;
+label define heh_09    96 "Valid skip" 97 "Don't know" 98 "Refusal" 
+                       99 "Not stated" ;
+label define heh_10    1 "Always" 2 "Often" 3 "Sometimes" 4 "Rarely" 
+                       5 "Never" 6 "Valid skip" 7 "Don't know" 8 "Refusal" 
+                       9 "Not stated" ;
+label define heh_11    1 "Always" 2 "Often" 3 "Sometimes" 4 "Rarely" 
+                       5 "Never" 6 "Valid skip" 7 "Don't know" 8 "Refusal" 
+                       9 "Not stated" ;
+label define drr_110   1 "Every day" 2 "4-6 times a week" 
+                       3 "2-3 times a week" 4 "Once a week" 
+                       5 "Once or twice in the past month" 
+                       6 "Not in the past month" 7 "Never had a drink" 
+                       96 "Valid skip" 97 "Don't know" 98 "Refusal" 
+                       99 "Not stated" ;
+label define smk_05    1 "Daily" 2 "Occasionally" 3 "Not at all" 
+                       6 "Valid skip" 7 "Don't know" 8 "Refusal" 
+                       9 "Not stated" ;
+label define srh_110   1 "Excellent" 2 "Very good" 3 "Good" 4 "Fair" 5 "Poor" 
+                       6 "Valid skip" 7 "Don't know" 8 "Refusal" 
+                       9 "Not stated" ;
+label define srh_115   1 "Excellent" 2 "Very good" 3 "Good" 4 "Fair" 5 "Poor" 
+                       6 "Valid skip" 7 "Don't know" 8 "Refusal" 
+                       9 "Not stated" ;
+label define fam_03    1 "Very satisfied" 2 "Satisfied" 
+                       3 "Neither satisfied nor dissatisfied" 
+                       4 "Dissatisfied" 5 "Very dissatisfied" 6 "Valid skip" 
+                       7 "Don't know" 8 "Refusal" 9 "Not stated" ;
+label define fam_04    1 "Very satisfied" 2 "Satisfied" 
+                       3 "Neither satisfied nor dissatisfied" 
+                       4 "Dissatisfied" 5 "Very dissatisfied" 6 "Valid skip" 
+                       7 "Don't know" 8 "Refusal" 9 "Not stated" ;
+label define smg_01    1 "Not at all stressful" 2 "Not very stressful" 
+                       3 "A bit stressful" 4 "Quite a bit stressful" 
+                       5 "Extremely stressful" 6 "Valid skip" 7 "Don't know" 
+                       8 "Refusal" 9 "Not stated" ;
+label define smg_02    1 "Work" 2 "Financial concerns" 3 "Family" 
+                       4 "School work" 5 "Not enough time" 6 "Own health" 
+                       7 "Other - Specify" 96 "Valid skip" 97 "Don't know" 
+                       98 "Refusal" 99 "Not stated" ;
+label define ttlincg2  1 "Less than $25,000" 2 "$25,000 to $49,999" 
+                       3 "$50,000 to $74,999" 4 "$75,000 to $99,999" 
+                       5 "$100,000 to $124,999" 6 "$125,000 or more" 
+                       96 "Valid skip" 97 "Don't know" 98 "Refusal" 
+                       99 "Not stated" ;
+label define famincg2  1 "Less than $25,000" 2 "$25,000 to $49,999" 
+                       3 "$50,000 to $74,999" 4 "$75,000 to $99,999" 
+                       5 "$100,000 to $124,999" 6 "$125,000 or more" 
+                       96 "Valid skip" 97 "Don't know" 98 "Refusal" 
+                       99 "Not stated" ;
