@@ -301,6 +301,8 @@ Our next steps will include using alternative models to evaluate the accuracy of
 
 ## Appendix
 
+## Github link: https://github.com/xingyupu/PS2
+
 Model summary:
 
 ```{r, echo=FALSE, include=TRUE, message=FALSE, warning=FALSE}
