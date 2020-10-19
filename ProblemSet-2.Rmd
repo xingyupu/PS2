@@ -2,7 +2,9 @@
 title: "Exploring the factors that highly correlate with Stress Level"
 author: "Xingyu pu, Geng Li, Yuchwn Wu, Zhihuan Shao"
 date: "Oct.15, 2020"
-output: pdf_document
+output:
+  html_document:
+    df_print: paged
 ---
 
 ```{r setup, include=FALSE}
@@ -301,7 +303,8 @@ Our next steps will include using alternative models to evaluate the accuracy of
 
 ## Appendix
 
-## Github link: https://github.com/xingyupu/PS2
+# Code and data supporting this analysis is available at: 
+https://github.com/xingyupu/PS2
 
 Model summary:
 
@@ -313,7 +316,7 @@ summary(model)
 
 ```
 
-#Github link: 
+
 
 \newpage
 Residual plots:
